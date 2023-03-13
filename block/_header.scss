@@ -1,9 +1,50 @@
-header{
+
+
+
+.pokedextittle {
+    margin-top: 20px;
+    height: 200px;
+    width: 900px;
+    
 
     
-    img {
-        height: 200px;
-        width: 900px;
-        }
 }
+
+.filterpoke{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 100px;
+
+
+    input {
+        padding: 10px;
+        font-size: 25px;
+        border-width: 10px;
+        border-color: #CCCCCC;
+        background-color: #FFFFFF;
+        color: #000000;
+        border-style: inset;
+        border-radius: 20px;
+        box-shadow: 19px 0px 15px rgba(205,46,46,.57);
+        text-shadow: -27px -12px 17px rgba(66,66,66,.76);
+   }
+    input:focus {
+        outline:none;
+   }
+}
+
+
+.pokerueda{
+display: flex;
+img{
+    position:absolute;
+  height:200px;
+  width:400px;
+  top: 55px;
+  left: calc(50% - 300px);
+  
+}
+}
+
 

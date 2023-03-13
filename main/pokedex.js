@@ -25,14 +25,17 @@ const mapear = (characters) => {
 
 //4º crear funcion pintar para meter todos los elementos en el html
 const pintar = (characters) => {
+
+  pokedex$$.innerHTML =""
   for (const character of characters) {
     const characterdiv$$ = document.createElement("div");
     let html = `
 <div class="tarjeta">
 <div class="barrtop">
-    <p class="idpoke">${character.id}</p>
+    <p class="idpoke">${character.id}<img class="imgpoke" src="./img/pokeballclassic.png" alt=""></p>
+   
     <h3 class="namepoke">${character.nombre}</h3>
-    <img class="imgpoke" src="" alt="">
+    
 </div>
 
 <div class="imagepoke">
@@ -44,14 +47,42 @@ const pintar = (characters) => {
       html += `<img class="imgtype" src="./img/${iterator.type.name}.png" alt=""></div>`;
     }
    
-
-
-    characterdiv$$.innerHTML = `</div> </div>` + html;
+    characterdiv$$.innerHTML = `</div> </div>` + html
     pokedex$$.appendChild(characterdiv$$);
   }
 };
 
+
+
+//5º creamos un filtro buscador y añadir un escuchador de eventos
+const cogerinput = (characters) =>{
+const input$$ = document.querySelector("input")
+//console.log(input$$)
+input$$.addEventListener ("input",() => busqueda(input$$.value,characters))
+
+}
+
+const busqueda = (filtro,characters) => {
+  //console.log(characters);
+  
+  let characterfiltrado = characters.filter((character) => 
+  character.nombre.toLowerCase().includes(filtro))
+  //console.log(characterfiltrado);
+  pintar(characterfiltrado)
+  
+  }
+  
+
+
+
+
+
+
 // console.log(character);
+
+
+
+
 
 //1º paso traer informacion
 
@@ -69,7 +100,10 @@ const init = async () => {
  const characterMapeados = mapear(pokeall);
  // console.log(characterMapeados);
 
-  pintar(characterMapeados);
+pintar(characterMapeados);
+cogerinput (characterMapeados);
+
+
 };
 
 init();
