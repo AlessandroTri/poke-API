@@ -17,7 +17,7 @@ const get = async (url) => {
 const mapear = (characters) => {
   return characters.map(character => ({
     nombre: character.name,
-    imagen: character.sprites.other.dream_world.front_default,
+    imagen: character.sprites.other.home.front_default,
     types: character.types,
     id: character.id,
   }));
