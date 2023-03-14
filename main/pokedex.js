@@ -41,12 +41,14 @@ const pintar = (characters) => {
 <div class="imagepoke">
     <img src="${character.imagen}" alt="">
 </div>
+
 <div class="buttompoke">`;
     for (const iterator of character.types) {
       html += `<div class="cajapoke"><p class="typepoke">${iterator.type.name}</p>`;
       html += `<img class="imgtype" src="./img/${iterator.type.name}.png" alt=""></div>`;
     }
-   
+  
+
     characterdiv$$.innerHTML = `</div> </div>` + html
     pokedex$$.appendChild(characterdiv$$);
   }

@@ -64,6 +64,10 @@ body {
   height: 350px;
 }
 
+.tarjeta:hover {
+  transform: scale(1.1);
+}
+
 .imgtype {
   display: flex;
   text-align: center;
@@ -103,7 +107,7 @@ body {
 
 #pokedex {
   display: flex;
-  grid-gap: 20px;
+  grid-gap: 35px;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
