@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url("../main/img/fondo blanco 3 oscuro.jpg");
+  background-image: url("../main/img/fondooscuro.jpg");
   font-family: rubik;
   margin: 0%;
   background-repeat: unset;
@@ -56,7 +56,7 @@ body {
   justify-content: space-around;
   align-items: stretch;
   padding: 30px;
-  background-image: url(../main/img/fondo\ blanco.webp);
+  background-image: url(../main/img/fondoblanco.webp);
   border: rgb(0, 0, 0) 2px solid;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
