@@ -32,7 +32,7 @@ const pintar = (characters) => {
     let html = `
 <div class="tarjeta">
 <div class="barrtop">
-    <p class="idpoke">${character.id}<img class="imgpoke" src="./img/pokeballclassic.png" alt=""></p>
+    <p class="idpoke">${character.id}<img class="imgpoke" src="./main/img/pokeballclassic.png" alt=""></p>
    
     <h3 class="namepoke">${character.nombre}</h3>
     
@@ -45,7 +45,7 @@ const pintar = (characters) => {
 <div class="buttompoke">`;
     for (const iterator of character.types) {
       html += `<div class="cajapoke"><p class="typepoke">${iterator.type.name}</p>`;
-      html += `<img class="imgtype" src="./img/${iterator.type.name}.png" alt=""></div>`;
+      html += `<img class="imgtype" src="./main/img/${iterator.type.name}.png" alt=""></div>`;
     }
   
 
